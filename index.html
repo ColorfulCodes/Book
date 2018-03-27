@@ -22,14 +22,31 @@
 
     </div> -->
 
-    <div class="container">
 
+      <header>
+        <nav>
+          <div class="main-wrapper">
+            <ul>
+              <li><a href="index.php">Home</a></li>
+            </ul>
+            <div class="nav-login">
+              <form>
+                <input type="text" name="uid" placeholder="username/email">
+                <input type="password" name="pwd" placeholder="password">
+                <button type="submit" name="submit">Login</button>
+              </form>
+          </div>
+        </nav>
+      </header>
+
+
+      <div class="container">
       <div class="row lg-title">
 
         <div class="col-12">
           <h1 class="text-center">BookShare</h1>
 
-          <button class="login" style="padding-top: 10px; padding-bottom:10px;"type="button" name="button" data-toggle="modal" data-target="#mymodal">Sign Up</button>
+          <button class="login" style="padding-top: 10px; padding-bottom:10px; cursor:pointer;"type="button" name="button" data-toggle="modal" data-target="#mymodal">Sign Up</button>
 
           <div class="modal fade" id="mymodal">
             <div class="modal-dialog">
@@ -38,7 +55,7 @@
                   <!-- login -->
 
 
-	                 <form class="p">
+	                 <form class="p" action='includes/signup.inc.php' method="POST">
                      <h2>Sign up here</h2>
                      <table>
                       <tr>
@@ -46,7 +63,7 @@
                           Name:
                         </td>
                         <td>
-                          <input type="text" placeholder="Name" name="">
+                          <input type="text" placeholder="Username" name="uid">
                         </td>
                       </tr>
                       <tr>
@@ -54,7 +71,7 @@
                           Password:
                         </td>
                         <td>
-                        <input type="Password" placeholder="Password" name="">
+                        <input type="password" placeholder="Password" name="pwd">
                         </td>
 
                       </tr>
@@ -63,10 +80,11 @@
                           Email:
                         </td>
                         <td>
-                          <input type="mail" placeholder="Email" name="">
+                          <input type="text" placeholder="Email" name="email">
                         </td>
                       </tr>
                     </table>
+                    <button type="submit" name= "submit">Sign Up</button>
                    </form>
 
 	<!-- end:Main Form -->
